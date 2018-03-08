@@ -9,7 +9,14 @@ class CommentList extends Component{
     }
     
     static defaultProps = {
-        comments :[]
+        comments:[]
+    }
+
+    constructor(props){
+        super(props);
+        this.state = {
+            comments:props.comments || []
+        }
     }
 
     handleDeleteComment(index){
@@ -22,7 +29,7 @@ class CommentList extends Component{
     render(){
         return (
             <div>
-                {this.props.comments.map((comment,index) => 
+                {this.state.comments.map((comment,index) => 
                       <Comment 
                             comment={comment} 
                             key={index} 

@@ -12,7 +12,7 @@ class CommentApp extends Component{
     constructor(props){
         super(props);
         this.state = {
-            comments :props.data // 用来存放评论的数组
+            comments :props.data || [] // 用来存放评论的数组
         }
     }
 
