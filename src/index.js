@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentApp from "./comment/CommentApp"
-import Index from "./makeRedux/Index"
+import ReactRedux from "./makeRedux/Index"
 import './index.css';
 
 // make redux
@@ -9,7 +9,7 @@ require("./makeRedux/makeredux");
 
 // context and redux
 ReactDOM.render(
-  <Index />,
+  <ReactRedux />,
   document.getElementById('context')
 );
 
