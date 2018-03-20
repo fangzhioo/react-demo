@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Header from "./Header"
-import Content from "./Content"
+import React, { Component } from 'react';
+import Header from "./Header";
+import Content from "./Content";
+import { Provider } from './react-redux';
 
 function createStore (reducer) {
     let state = null
@@ -31,23 +31,17 @@ function createStore (reducer) {
 const store = createStore(themeReducer)
 
 class Index extends Component {
-    static childContextTypes = {
-        store: PropTypes.object
-    } // 定义一个指定类型的store
-
-    getChildContext(){
-        return { store }
-    } // 获取context
-
+    //把 Provider 作为组件数的根节点
     render(){
         return (
-            <div>
+            <Provider store={ store }>
                 <Header /> 
                 <Content /> 
-            </div>
+            </Provider>
         )
     }
 
 }
+
 
 export default Index;

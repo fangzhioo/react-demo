@@ -51,3 +51,26 @@ export const connect = (mapStateToProps,mapDispatchToProps) => (WrappedComponent
 
   return Connect
 }
+
+export class Provider extends Component {
+  static propTypes = {
+    store: PropTypes.object,
+    children: PropTypes.any
+  }// 定义一个指定类型的store
+
+  static childContextTypes = {
+    store: PropTypes.object
+  }
+
+  getChildContext () {
+    return {
+      store: this.props.store
+    }
+  }// 获取context
+
+  render () {
+    return (
+      <div>{this.props.children}</div>
+    )
+  }
+}
