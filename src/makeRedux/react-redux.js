@@ -1,10 +1,13 @@
-/**
- * 高阶组件帮助我们从 context 取数据
- */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-export const connect = (mapStateToProps) => (WrappedComponent) => {
+/**
+ * 高阶组件（函数） 完成对context的获取 和 整合来自context的数据方式 
+ * @param {object} mapStateToProps 获取store的方式  ~ 类似vuex中的mapGetters
+ * @param {object} mapDispatchToProps 如何获取、整合状态 ~ 类似vuex中的mapActions
+ * 
+ * 
+ */
+export const connect = (mapStateToProps,mapDispatchToProps) => (WrappedComponent) => {
   class Connect extends Component {
     static contextTypes = {
       store: PropTypes.object
@@ -25,10 +28,16 @@ export const connect = (mapStateToProps) => (WrappedComponent) => {
     _updateProps(){
       const { store } = this.context;
        // 额外传入 props，让获取数据更加灵活
-      let stateProps = mapStateToProps(store.getState(),this.props);     
+      let stateProps = mapStateToProps
+        ? mapStateToProps(store.getState(), this.props)
+        : {} ; // 防止 mapStateToProps 没有传入
+      let dispatchProps = mapDispatchToProps
+        ? mapDispatchToProps(store.dispatch, this.props)
+        : {} ; // 防止 mapDispatchToProps 没有传入   
       this.setState({
-        allProps :{  // 整合普通的props 和 从state生成的props 
+        allProps :{  // 整合普通的props 和 从state生成的props 以及 dispatch
           ...stateProps,
+          ...dispatchProps,
           ...this.props
         }
       })
