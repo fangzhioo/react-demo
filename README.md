@@ -1,6 +1,11 @@
 # react demo
- 这是一个简单的实现用户评论组建的reactjs项目，代码基本来自[Reactjs 小书 by 胡子大哈](http://huziketang.com/books/react/)
+ 这是一个简单的学习Reactjs的项目。
 
+* 学习教程来自以下：
+  - [React 中文文档 by Facebook](https://doc.react-china.org/)
+  - [Reactjs 小书 by 胡子大哈](http://huziketang.com/books/react/)
+  - ...
+  
 ## 总结
 
 * 组件中的函数 按照一定的顺序来编写，有利于代码的阅读和维护。
