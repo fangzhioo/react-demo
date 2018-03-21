@@ -10,7 +10,7 @@ class Header extends Component {
 
     render () {
         return (
-            <h1 style={{ color: this.props.themeColor }}>结合context和store （标题）</h1>
+            <h1 style={{ color: this.props.themeColor }}>这里是模拟redux 和 react-redux 的功能</h1>
         )
     }
 }

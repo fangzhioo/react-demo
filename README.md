@@ -14,4 +14,5 @@
   7. render*开头的方法，有时候 render() 方法里面的内容会分开到不同函数里面进行，这些函数都以 render* 开头。
   8. render() 方法。
 
-* 
+* git常用命令
+![](https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png)
