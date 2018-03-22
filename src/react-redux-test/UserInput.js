@@ -55,14 +55,14 @@ class UserInput extends Component{
                 <span className="input-tips">Gender:</span> 
                 <label>
                   <input type='radio' name='gender'
-                    value={this.state.user.gender}
+                    value="male"
                     onBlur={this.handleInputBlur.bind(this)}
                     onChange={this.handleInputChange.bind(this)} />
                   <span>Male:</span> 
                 </label>
                 <label>  
                   <input type='radio' name='gender'
-                    value={this.state.user.gender}
+                    value="famale"
                     onBlur={this.handleInputBlur.bind(this)}
                     onChange={this.handleInputChange.bind(this)}/>
                     <span>Female:</span> 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from "react-redux";
 
+// 现在 Header 是一个Dumb组件了 不依赖react-redux 
 class Header extends Component {
 
     static propTypes = {
@@ -14,14 +14,5 @@ class Header extends Component {
         )
     }
 }
-
-// 使用高阶组件传递参数
-const mapStateToProps = (state) => {
-    return {
-        themeColor: state.themeColor
-    }
-}
-Header = connect(mapStateToProps)(Header);
-
 
 export default Header;
