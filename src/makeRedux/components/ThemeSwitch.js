@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // 现在这里是一个Dumb组件了
-
 class ThemeSwitch extends Component {
     static propsTypes = {
       themeColor: PropTypes.string,

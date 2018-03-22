@@ -57,6 +57,7 @@ class CommentApp extends Component{
     render(){
         return (
             <div className="wrapper">
+                <h2>app - 状态提升</h2>
                 <CommentInput onSubmit={this.handleSubmitComment.bind(this)} />
                 <CommentList 
                     comments={this.state.comments}
@@ -68,4 +69,4 @@ class CommentApp extends Component{
 }
 
 CommentApp = wrapWithLoadData(CommentApp, 'comments');
-export default CommentApp
+export default CommentApp;

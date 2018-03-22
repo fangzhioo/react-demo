@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentApp from "./comment/CommentApp"
+import CommentApp2 from "./comment2/Index"
 import ReactRedux from "./makeRedux/Index"
 import UsersContainer from "./react-redux-test/UsersContainer"
 import './index.css';
-
 // make redux
 require("./makeRedux/makeredux");
 
@@ -24,6 +24,10 @@ ReactDOM.render(
     <CommentApp />,
     document.getElementById('root')
   );
-
+// comment app2
+ReactDOM.render(
+  <CommentApp2 />,
+  document.getElementById('root1')
+);
 
   

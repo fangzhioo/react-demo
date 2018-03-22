@@ -1,6 +1,4 @@
 
- 
-
  /**
   function createStore (state, stateChanger) {
       const listeners = []
