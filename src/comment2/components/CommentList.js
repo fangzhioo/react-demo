@@ -12,15 +12,7 @@ class CommentList extends Component{
         comments:[]
     }
 
-    constructor(props){
-        super(props);
-        this.state = {
-            comments:props.comments || []
-        }
-    }
-
-    handleDeleteComment(index){
-        
+    handleDeleteComment(index){       
         if(this.props.onDeleteComment){       
             this.props.onDeleteComment(index);
         }
@@ -29,7 +21,7 @@ class CommentList extends Component{
     render(){
         return (
             <div>
-                {this.state.comments.map((comment,index) => 
+                {this.props.comments.map((comment,index) => 
                       <Comment 
                             comment={comment} 
                             key={index} 
