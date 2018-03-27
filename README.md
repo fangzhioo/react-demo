@@ -6,6 +6,7 @@
 
   - [React 中文文档 by Facebook](https://doc.react-china.org/)
   - [Reactjs 小书 by 胡子大哈](http://huziketang.com/books/react/)
+  - [react-router-tutorial by reactjs](https://github.com/reactjs/react-router-tutorial)
   - [React 入门实例教程 by 阮一峰](http://www.ruanyifeng.com/blog/2015/03/react.html)
   - ...
 
