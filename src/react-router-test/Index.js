@@ -1,13 +1,29 @@
-import {Component} from "react";
+import React,{ Component } from 'react'
 
 class Index extends Component{
     constructor(props){
         super(props);
-        console.log('router index',props);
+        // props中挂载了路由信息 即{match,location,history}
+        const {match,location,history} = props;
+        console.log('match',match);
+        console.log('location',location);
+        console.log('history',history);
+        this.state = {
+            ...match,
+            location,
+            history
+        }
     }
+
     render(){
         return (
-            <div>Router Index</div>
+            <div>
+                <ul>
+                    <li>路由中的参数为：{this.state.params.id}</li>
+                    <li>路由路径为：{this.state.path}</li>
+                    <li>路由地址为：{this.state.url}</li>
+                </ul>
+            </div>   
         )
     }
 
