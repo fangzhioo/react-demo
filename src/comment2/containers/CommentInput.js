@@ -25,7 +25,7 @@ class CommentInputContainer extends Component {
   _loadUsername () {
     // 从 LocalStorage 加载 username
     // 然后可以在 render 方法中传给 CommentInput
-    const username = localStorage.getItem('username').toString();
+    const username = localStorage.getItem('username') && localStorage.getItem('username').toString();
     if (username) {
       this.setState({ username })
     }
